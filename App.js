@@ -2,53 +2,13 @@ import * as React from 'react';
 import { AsyncStorage, Button, Text, TextInput, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './HomeScreen.js';
 
 const AuthContext = React.createContext();
-import { createDrawerNavigator } from '@react-navigation/drawer';
-const Drawer = createDrawerNavigator();
 function SplashScreen() {
   return (
     <View>
       <Text>Loadyng GymTotal-App...</Text>
-    </View>
-  );
-}
-
-function Feed() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
-    </View>
-  );
-}
-
-function Article() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Article Screen</Text>
-    </View>
-  );
-}
-function HomeScreen() {
-  const { signOut } = React.useContext(AuthContext);
-  return (
-          <Drawer.Navigator
-      drawerStyle={{
-        backgroundColor: '#c6cbef',
-        width: 240,
-      }}
-    >
-      <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Article" component={Article} />
-    </Drawer.Navigator>
-  );
-}
-
-
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
     </View>
   );
 }
