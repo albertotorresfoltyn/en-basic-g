@@ -3,7 +3,7 @@
         "name": "vault",
         "excercises": [
             {
-                "excercise": "front spring",
+                "name": "front spring",
                 "drills": [
                     {
                         "name": "Drill 1: small front handspring",
@@ -23,7 +23,7 @@
         "name": "uneven bars",
         "excercises": [
             {
-                "excercise": "front spring",
+                "excercise": "other",
                 "drills": [
                     {
                         "name": "Drill 1: small front handspring",
