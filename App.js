@@ -3,23 +3,12 @@ import { AsyncStorage, Button, Text, TextInput, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen.js';
-
-const AuthContext = React.createContext();
-function SplashScreen() {
-  return (
-    <View>
-      <Text>Loadyng GymTotal-App...</Text>
-    </View>
-  );
-}
-
-
-
+import SplashScreen from './SplashScreen.js';
+import AuthContext from './AppContext';
 
 function SignInScreen() {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
-
   const { signIn } = React.useContext(AuthContext);
 
   return (
